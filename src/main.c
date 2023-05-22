@@ -26,8 +26,6 @@ int main(int argc, char ** argv)
             
             // Initialise the parser.
             verilog_parser_init();
-
-            // Setup the preprocessor to look in ./tests/ for include files.
             ast_list_append(yy_preproc -> search_dirs, "./tests/");
             ast_list_append(yy_preproc -> search_dirs, "./");
             printf("%s ", argv[F]);fflush(stdout);
